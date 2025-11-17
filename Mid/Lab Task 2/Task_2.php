@@ -12,8 +12,10 @@
     <p>Email:</p>
     <input type="email">
 
-    <p>Password</p>
+    <p>Password:</p>
     <input type="password">
 
+    <p>Confirm Password:</p>
+    <input type="password">
 </body>
 </html>
