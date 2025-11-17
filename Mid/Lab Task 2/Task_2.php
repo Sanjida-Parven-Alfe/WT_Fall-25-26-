@@ -6,9 +6,11 @@
 <body>
     <h1>Student Registration</h1>
 
-    <p>Full Name</p>
+    <p>Full Name:</p>
     <input type="text">
 
-    
+    <p>Email:</p>
+    <input type="email">
+
 </body>
 </html>
