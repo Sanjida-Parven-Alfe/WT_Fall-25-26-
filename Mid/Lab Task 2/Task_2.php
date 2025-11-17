@@ -39,6 +39,14 @@
             let email = document.getElementById("email").value.trim();
             let pass = document.getElementById("password").value.trim();
             let cpass = document.getElementById("confirmPass").value.trim();
+
+            let error = document.getElementById("studentError");
+            let soutput = document.getElementById("studentOutput");
+
+            error.innerHTML = "";
+            soutput.innerHTML = "";
+
+            
         }
 
     </script>
