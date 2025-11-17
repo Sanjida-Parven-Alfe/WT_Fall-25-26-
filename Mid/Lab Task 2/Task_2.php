@@ -5,10 +5,15 @@
 </head>
 <body>
     <h1>Student Registration</h1>
-
-    <p>Full Name:</p>
-    <input type="text">
-
+<table>
+    <tr>
+        <td>Full Name:</td>
+    </tr>
+    <tr>
+        <td><input type="text"></td>
+    </tr>
+</table>
+    
     <p>Email:</p>
     <input type="email">
 
@@ -17,5 +22,10 @@
 
     <p>Confirm Password:</p>
     <input type="password">
+
+   <p><input type="submit" value="Register"></p> 
+
+    
+    
 </body>
 </html>
