@@ -12,5 +12,8 @@
     <p>Email:</p>
     <input type="email">
 
+    <p>Password</p>
+    <input type="password">
+
 </body>
 </html>
