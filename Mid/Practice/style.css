@@ -1,0 +1,22 @@
+/* টেবিল সুন্দর করার জন্য */
+table {
+    width: 100%;
+    border-collapse: collapse; /* বর্ডার চিকন করার জন্য */
+    margin-top: 20px;
+}
+/* পাস করলে সবুজ */
+.green {
+    background-color: green;
+    color: white;
+}
+/* ফেল করলে লাল (৫০ বা তার কম) */
+.red {
+    background-color: red;
+    color: white;
+}
+
+/* এরর মেসেজ লাল */
+#msg {
+    color: red;
+}
+ 
