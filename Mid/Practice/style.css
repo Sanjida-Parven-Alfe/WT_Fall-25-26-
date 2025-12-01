@@ -1,7 +1,8 @@
 /* টেবিল সুন্দর করার জন্য */
 table {
     width: 100%;
-    border-collapse: collapse; /* বর্ডার চিকন করার জন্য */
+    border: 1px solid black;/* বর্ডার চিকন করার জন্য */
+    
     margin-top: 20px;
 }
 /* পাস করলে সবুজ */

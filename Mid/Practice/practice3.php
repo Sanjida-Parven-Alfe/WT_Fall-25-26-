@@ -33,7 +33,9 @@
  
   <!-- Output Section -->
   <div id="error"></div>
-  <div id="output"></div>
+  <div id="output">
+    
+  </div>
  
   <!-- javascript file linked -->
   <script src="practice3.js"></script>

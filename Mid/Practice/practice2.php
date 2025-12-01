@@ -9,7 +9,7 @@
         <input type="number" id="marks" placeholder="Enter Marks">
         <button onclick="addStudent()">Add Result</button>
         <p id="msg"></p>
-        <table border="1">
+        <table>
             <thead>
                 <tr>
                     <th>Student Name</th>
@@ -18,7 +18,7 @@
             </thead>
             <tbody id="tableBody"></tbody>
         </table>
-        
+
         <script src="script.js"></script>
     </body>
 </html>
