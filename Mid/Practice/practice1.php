@@ -29,5 +29,8 @@
     <span id="span1">Span1</span>
     <h1 id="h1" style="display: inline-block;">H1</h1>
     <div id="div3" style="display: inline;">Box3</div>
+
+    <input type="radio" id="alfe">
+    
 </body>
 </html>

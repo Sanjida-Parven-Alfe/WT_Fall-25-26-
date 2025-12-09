@@ -33,7 +33,7 @@
     <div id="courseOutput"></div>
 
     <script>
-        // Student Validation
+       
         function studentRegister () {
             let name = document.getElementById("fullName").value.trim();
             let email = document.getElementById("email").value.trim();
