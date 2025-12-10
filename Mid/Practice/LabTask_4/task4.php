@@ -28,7 +28,7 @@
             </tr>
         </thead>
         <tbody id="studentTable">
-            <!-- Rows will be added here -->
+        
         </tbody>
     </table>
 
@@ -47,7 +47,7 @@
 
             var table = document.getElementById("studentTable");
             
-            // নতুন রো তৈরি (Template String ব্যবহার করে স্যারের স্টাইলে)
+           
             var newRow = `
                 <tr>
                     <td>${name}</td>
