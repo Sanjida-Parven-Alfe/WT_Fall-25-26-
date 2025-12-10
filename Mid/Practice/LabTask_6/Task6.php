@@ -20,7 +20,7 @@
             var seconds = now.getSeconds();
             var ampm = "AM";
 
-            // 12-hour format conversion
+       
             if (hours >= 12) {
                 ampm = "PM";
                 if (hours > 12) hours = hours - 12;
