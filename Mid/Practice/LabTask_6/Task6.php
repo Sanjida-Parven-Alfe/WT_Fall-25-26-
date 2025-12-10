@@ -40,7 +40,7 @@
       
         setInterval(updateClock, 1000);
         
-        // Call immediately to avoid delay
+       
         updateClock();
     </script>
 
