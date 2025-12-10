@@ -7,8 +7,8 @@
         nav { background: #333; padding: 10px; color: white; }
         nav a { color: white; margin-right: 15px; text-decoration: none; cursor: pointer; font-weight: bold; }
         .container { padding: 20px; }
-        .section { display: none; } /* Hide all sections initially */
-        .active { display: block; } /* Only show active section */
+        .section { display: none; } 
+        .active { display: block; }
         
         /* Dark Mode Styles */
         .dark-mode { background-color: #222; color: #ddd; }
