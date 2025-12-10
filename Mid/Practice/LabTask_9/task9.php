@@ -10,7 +10,7 @@
         .section { display: none; } 
         .active { display: block; }
         
-        /* Dark Mode Styles */
+        
         .dark-mode { background-color: #222; color: #ddd; }
         .dark-mode nav { background: #555; }
         
@@ -29,13 +29,13 @@
 
     <div class="container">
         
-        <!-- Home Section -->
+    
         <div id="home" class="section active">
             <h2 id="greeting">Hello!</h2>
             <p>Welcome to my interactive portfolio.</p>
         </div>
 
-        <!-- Projects Section -->
+     
         <div id="projects" class="section">
             <h2>My Projects</h2>
             <ul>
