@@ -37,7 +37,7 @@
             document.getElementById("clock").innerHTML = timeString;
         }
 
-        // Update every second
+      
         setInterval(updateClock, 1000);
         
         // Call immediately to avoid delay
