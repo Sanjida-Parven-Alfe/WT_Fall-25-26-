@@ -97,7 +97,7 @@
             }
         }
 
-        // 4. Contact Form Validation
+    
         function validateContact() {
             var name = document.getElementById("cName").value;
             var email = document.getElementById("cEmail").value;
