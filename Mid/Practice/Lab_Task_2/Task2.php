@@ -38,7 +38,7 @@
         function nextImage() {
             currentIndex++;
             if (currentIndex >= images.length) {
-                currentIndex = 0; // Loop back to start
+                currentIndex = 0; 
             }
             showImage();
         }
