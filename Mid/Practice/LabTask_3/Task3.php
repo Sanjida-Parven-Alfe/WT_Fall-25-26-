@@ -28,7 +28,7 @@
             var btn = document.getElementById("toggleBtn");
 
             if (isDarkMode) {
-                // Switch to Light Mode
+                
                 body.style.backgroundColor = "white";
                 body.style.color = "black";
                 btn.innerHTML = "Switch to Dark Mode";
