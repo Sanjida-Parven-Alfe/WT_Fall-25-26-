@@ -76,7 +76,7 @@
         else if (hour >= 18) greetingText = "Good Evening";
         document.getElementById("greeting").innerHTML = greetingText + ", Welcome!";
 
-        // 2. Section Toggling
+       
         function showSection(sectionId) {
             // Hide all sections
             var sections = document.getElementsByClassName("section");
