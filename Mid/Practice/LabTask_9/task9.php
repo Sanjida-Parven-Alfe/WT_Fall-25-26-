@@ -87,7 +87,7 @@
             document.getElementById(sectionId).style.display = "block";
         }
 
-        // 3. Theme Switcher
+
         function toggleTheme() {
             var body = document.getElementById("body");
             if (body.classList.contains("dark-mode")) {
