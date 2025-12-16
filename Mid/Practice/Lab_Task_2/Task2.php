@@ -28,7 +28,7 @@
         var currentIndex = 0;
         var imgElement = document.getElementById("sliderImage");
 
-        // প্রথম ছবি লোড করা
+    
         imgElement.src = images[currentIndex];
 
         function showImage() {
