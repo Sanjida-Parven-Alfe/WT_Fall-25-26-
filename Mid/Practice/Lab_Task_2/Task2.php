@@ -18,7 +18,7 @@
     <button onclick="nextImage()">Next</button>
 
     <script>
-        // ছবির লিংকের Array
+        
         var images = [
             "https://wallpapers.com/images/featured/kakashi-hatake-pictures-meka9numthx0pe6z.jpg",
             "https://w0.peakpx.com/wallpaper/345/540/HD-wallpaper-kakashi-hatake-blue-neon-lights-naruto-characters-artwork-sharingan-hatake-kakashi-manga-samurai-naruto.jpg",
