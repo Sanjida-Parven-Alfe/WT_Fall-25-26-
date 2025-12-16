@@ -34,7 +34,7 @@
                 btn.innerHTML = "Switch to Dark Mode";
                 isDarkMode = false;
             } else {
-                // Switch to Dark Mode
+               
                 body.style.backgroundColor = "#333";
                 body.style.color = "white";
                 btn.innerHTML = "Switch to Light Mode";
