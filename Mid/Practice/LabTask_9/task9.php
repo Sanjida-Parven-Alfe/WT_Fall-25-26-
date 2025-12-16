@@ -69,7 +69,7 @@
     </div>
 
     <script>
-        // 1. Time-Based Greeting
+       
         var hour = new Date().getHours();
         var greetingText = "Good Morning";
         if (hour >= 12 && hour < 18) greetingText = "Good Afternoon";
