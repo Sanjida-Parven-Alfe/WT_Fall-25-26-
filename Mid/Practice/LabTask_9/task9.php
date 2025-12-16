@@ -45,7 +45,7 @@
             </ul>
         </div>
 
-        <!-- Contact Section -->
+       
         <div id="contact" class="section">
             <h2>Contact Me</h2>
             <form onsubmit="return validateContact()">
