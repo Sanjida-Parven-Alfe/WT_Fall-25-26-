@@ -46,7 +46,7 @@
         function prevImage() {
             currentIndex--;
             if (currentIndex < 0) {
-                currentIndex = images.length - 1; // Loop to end
+                currentIndex = images.length - 1; 
             }
             showImage();
         }
