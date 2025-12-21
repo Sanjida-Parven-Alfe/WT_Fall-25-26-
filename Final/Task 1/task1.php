@@ -42,7 +42,6 @@
         $emp3 = new Employee();
         $emp3->set_details("Charlie", "Designer", 55000);
 
-
         $employeeList = array($emp1, $emp2, $emp3);
 
         echo "<h3>Employee Salary Sheet</h3>"; 
