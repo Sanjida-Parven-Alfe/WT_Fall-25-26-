@@ -19,7 +19,6 @@
                 $this->monthlySalary = $s;
             }
 
-            
             function getAnnualSalary() {
                 return $this->monthlySalary * 12;
             }
