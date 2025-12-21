@@ -13,7 +13,6 @@
             public $position;
             public $monthlySalary;
 
-
             function set_details($n, $p, $s) {
                 $this->name = $n;            
                 $this->position = $p;
