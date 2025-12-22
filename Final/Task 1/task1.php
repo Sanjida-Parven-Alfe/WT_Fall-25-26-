@@ -7,7 +7,6 @@
     <h1>Employe Management</h1>
 
     <?php
-
         class Employee {
             public $name;
             public $position;
