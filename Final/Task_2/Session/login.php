@@ -12,7 +12,6 @@ $pass=$_POST["password"];
 
 if ($user=="admin" && $pass=="1234")
 {
-
     $_SESSION["username"] = $user;
     header("Location:dashboard.php");
     exit();
