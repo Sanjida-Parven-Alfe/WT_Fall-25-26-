@@ -35,7 +35,6 @@ session_start();
         $data = trim($data);
         return $data;
     }
-
     ?>
 
     <?php if (isset($_SESSION["name"])): ?>
