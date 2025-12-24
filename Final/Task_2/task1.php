@@ -15,7 +15,6 @@ session_start();
     <?php
     $name = "";
     $nameerror = "";
-
     if (isset($_GET['logout'])) {
         session_destroy();
         header("Location: task1.php");
