@@ -37,7 +37,6 @@ session_start();
     }
     ?>
     <?php if (isset($_SESSION["name"])): ?>
-
         <h3>Welcome, <?php echo $_SESSION["name"]; ?></h3>
         <a href="?logout=true">Logout</a>
 
