@@ -30,7 +30,6 @@ session_start();
             $_SESSION["name"] = $name;
         }
     }
-
     function test_input($data)
     {
         $data = trim($data);
