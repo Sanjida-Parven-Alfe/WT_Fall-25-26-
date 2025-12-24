@@ -46,7 +46,6 @@ session_start();
             <br><br>
             <input type="submit" name="login" value="Login">
         </form>
-
     <?php endif; ?>
 
 </body>
