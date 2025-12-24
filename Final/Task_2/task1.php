@@ -36,7 +36,6 @@ session_start();
         return $data;
     }
     ?>
-
     <?php if (isset($_SESSION["name"])): ?>
 
         <h3>Welcome, <?php echo $_SESSION["name"]; ?></h3>
