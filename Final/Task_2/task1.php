@@ -12,7 +12,6 @@ session_start();
 <body>
 
     <h3>Login</h3>
-
     <?php
     $name = "";
     $nameerror = "";
