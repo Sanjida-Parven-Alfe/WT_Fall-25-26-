@@ -41,7 +41,6 @@ session_start();
         <a href="?logout=true">Logout</a>
 
     <?php else: ?>
-
         <form method="post" action="">
             Name: <input type="text" name="name" value="<?php echo $name; ?>">
             <span style="color:red;"><?php echo $nameerror; ?></span>
