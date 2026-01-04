@@ -104,5 +104,20 @@ body { background: var(--light-bg); color: var(--text); overflow-x: hidden; tran
     color: var(--primary);
     gap: 15px;
 }
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
  
-
+.hero-image img {
+    max-width: 100%;
+    width: 600px;
+    animation: float 4s ease-in-out infinite;
+}
+ 
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
