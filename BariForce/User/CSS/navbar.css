@@ -125,3 +125,55 @@ body {
 .btn-logout:hover {
   background: #e84118;
 }
+.theme-btn {
+  background: transparent;
+  border: 1px solid #e1e1e1;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: #f1f1f1;
+  color: #4a90e2;
+  border-color: #4a90e2;
+}
+
+body.dark-mode {
+  background-color: #1a1a2e !important;
+  color: #f0f0f0;
+}
+
+.dark-mode .navbar {
+  background: #1a1a2e;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #333;
+}
+
+.dark-mode .nav-links a,
+.dark-mode .nav-link {
+  color: #e0e0e0;
+}
+
+.dark-mode .nav-links a:hover,
+.dark-mode .nav-links a.active-link,
+.dark-mode .nav-link:hover {
+  color: #4a90e2;
+}
+
+.dark-mode .theme-btn {
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .theme-btn:hover {
+  background: #333;
+  color: #ffd700;
+  border-color: #ffd700;
+}
