@@ -16,7 +16,23 @@
 
     <?php include 'navbar.php'; ?>
 
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Expert Home Services <br> at Your <span>Doorstep</span></h1>
+            <p>Need a professional cleaner, electrician, or driver? BariForce connects you with verified experts
+                instantly. Safe, secure, and reliable service.</p>
 
+            <div class="cta-buttons">
+                <a href="services.php" class="btn-primary">Book a Service</a>
+                <a href="login.php" class="btn-secondary">Sign In <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://img.freepik.com/free-vector/cleaning-service-concept-illustration_114360-98.jpg?w=740"
+                alt="Home Service Animation">
+        </div>
+    </section>
 
     <?php include 'footer.php'; ?>
 
