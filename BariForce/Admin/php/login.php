@@ -56,6 +56,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <i class="fas fa-lock"></i>
                     <input type="password" name="password" placeholder="Password" required>
                 </div>
+
+                <?php if($error): ?>
+                     <p class="error-msg"><?php echo $error; ?></p>
+                <?php endif; ?>
+
                 <button type="submit" class="login-btn">Login</button>
             </form>
             <div class="links">
