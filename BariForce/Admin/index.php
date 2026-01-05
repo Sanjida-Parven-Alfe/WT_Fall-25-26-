@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<?php
+    header("Location: php/login.php");
+    exit(); 
+?>
