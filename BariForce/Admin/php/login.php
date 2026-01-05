@@ -1,3 +1,28 @@
+<?php
+session_start();
+
+$error = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if ($username == "admin" && $password == "1234") {
+        $_SESSION['username'] = $username;
+        $_SESSION['role'] = 'admin';
+        header("Location: dashboard.php");
+        exit();
+    } elseif ($username == "user" && $password == "1234") {
+        $_SESSION['username'] = $username;
+        $_SESSION['role'] = 'user';
+        header("Location: ../../User/php/home.php");
+        exit();
+    } else {
+        $error = "Invalid Username or Password!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
