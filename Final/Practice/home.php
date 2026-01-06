@@ -21,8 +21,8 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body { background: var(--light-bg); color: var(--text); overflow-x: hidden; }
-
-        /* Navbar */
+    
+        
         .navbar {
             display: flex; justify-content: space-between; align-items: center;
             background: var(--white); padding: 1.2rem 5%;
