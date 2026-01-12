@@ -38,14 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Login - BariForce</title>
+    <link rel="stylesheet" href="../../User/CSS/navbar.css">
     <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../../User/CSS/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <?php include '../../User/php/navbar.php'; ?>
     <div class="login-container">
-        <a href="../../User/php/home.php" class="back-btn">
-            <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
         <div class="login-box">
             <h2 style="color:#4A90E2; margin-bottom:10px;">BariForce.</h2>
             <p>Welcome back! Please login.</p>
