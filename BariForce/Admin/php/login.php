@@ -72,5 +72,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
+
+    <?php include '../../User/php/footer.php'; ?>
+    <script src="../../User/js/themeToggle.js"></script>
+
 </body>
 </html>
