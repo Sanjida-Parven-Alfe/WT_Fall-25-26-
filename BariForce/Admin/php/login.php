@@ -21,12 +21,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['role'] = 'admin';
         header("Location: dashboard.php");
         exit();
-    } elseif ($username == "user" && $password == "1234") {
+    } 
+    elseif ($username == "user" && $password == "1234") {
         $_SESSION['username'] = $username;
         $_SESSION['role'] = 'user';
         header("Location: ../../User/php/home.php");
         exit();
-    } else {
+    } 
+    else {
         $error = "Invalid Username or Password!";
     }
 }
