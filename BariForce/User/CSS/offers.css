@@ -21,40 +21,85 @@
   margin: 40px auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(350px, 1fr)
-  ); 
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
 }
 
 .offer-card {
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    border: 1px solid #eee;
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .offer-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-
 .offer-card::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    opacity: 0.1;
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.offer-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.gradient-blue .offer-icon {
+  color: #4a90e2;
+}
+.gradient-blue::before {
+  background: #4a90e2;
+}
+.gradient-blue .badge {
+  background: rgba(74, 144, 226, 0.1);
+  color: #4a90e2;
+}
+
+.gradient-green .offer-icon {
+  color: #2ecc71;
+}
+.gradient-green::before {
+  background: #2ecc71;
+}
+.gradient-green .badge {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+}
+
+.gradient-purple .offer-icon {
+  color: #9b59b6;
+}
+.gradient-purple::before {
+  background: #9b59b6;
+}
+.gradient-purple .badge {
+  background: rgba(155, 89, 182, 0.1);
+  color: #9b59b6;
+}
+
+.gradient-orange .offer-icon {
+  color: #e67e22;
+}
+.gradient-orange::before {
+  background: #e67e22;
+}
+.gradient-orange .badge {
+  background: rgba(230, 126, 34, 0.1);
+  color: #e67e22;
 }
