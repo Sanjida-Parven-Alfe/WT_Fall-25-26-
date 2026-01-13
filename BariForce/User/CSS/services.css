@@ -70,3 +70,12 @@
     color: white;
     border-color: #4A90E2;
 }
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 5% 60px 5%; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
