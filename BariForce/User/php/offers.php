@@ -87,6 +87,13 @@ session_start();
 
     </div>
 
+    <?php include 'footer.php'; ?>
+
+    <script src="../js/themeToggle.js"></script>
+
+    <script src="../js/offers.js"></script>
+
+
 </body>
 
 </html>
