@@ -159,3 +159,39 @@
 }
 
 .book-btn:hover { background: #357ABD; }
+
+.dark-mode .service-header {
+    background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+    border-bottom: 1px solid #333;
+}
+
+.dark-mode .service-header h1 { color: #fff; }
+.dark-mode .service-header p { color: #bbb; }
+
+.dark-mode .search-container input {
+    background: #16213E;
+    border-color: #444;
+    color: white;
+}
+
+.dark-mode .filter-btn {
+    background: #16213E;
+    border-color: #444;
+    color: #ddd;
+}
+
+.dark-mode .filter-btn.active {
+    background: #4A90E2;
+    border-color: #4A90E2;
+    color: white;
+}
+
+
+.dark-mode .service-card {
+    background: #1F2E48;
+    border-color: #333;
+}
+
+.dark-mode .card-content h3 { color: #fff; }
+.dark-mode .card-content p { color: #ccc; }
+.dark-mode .card-footer { border-color: #333; }
