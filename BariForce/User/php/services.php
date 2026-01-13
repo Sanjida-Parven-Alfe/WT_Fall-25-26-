@@ -120,6 +120,11 @@ session_start();
         </div>
 
     </div>
+    <?php include 'footer.php'; ?>
+
+    <script src="../js/themeToggle.js"></script>
+    <script src="../js/services.js"></script>
+
 </body>
 
 </html>
