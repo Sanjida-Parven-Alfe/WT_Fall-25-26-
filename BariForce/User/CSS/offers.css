@@ -133,3 +133,75 @@
   color: #999;
   font-size: 0.8rem;
 }
+/* Coupon Code Box */
+.coupon-box {
+  background: #f8f9fa;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-text {
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.copy-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.copy-btn:hover {
+  background: #555;
+}
+
+.dark-mode .offer-header {
+  background: #1a1a2e;
+  border-bottom: 1px solid #333;
+}
+.dark-mode .offer-header h1 {
+  color: #fff;
+}
+.dark-mode .offer-header p {
+  color: #bbb;
+}
+
+.dark-mode .offer-card {
+  background: #16213e;
+  border-color: #333;
+}
+
+.dark-mode .offer-details h3 {
+  color: #fff;
+}
+.dark-mode .offer-details p {
+  color: #ccc;
+}
+
+.dark-mode .coupon-box {
+  background: #0f3460;
+  border-color: #444;
+}
+
+.dark-mode .code-text {
+  color: #fff;
+}
+.dark-mode .copy-btn {
+  background: #e94560;
+}
+.dark-mode .copy-btn:hover {
+  background: #c0392b;
+}
