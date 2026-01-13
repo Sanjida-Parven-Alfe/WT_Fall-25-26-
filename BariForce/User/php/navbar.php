@@ -1,3 +1,7 @@
+<?php
+$pathPrefix = (strpos($_SERVER['REQUEST_URI'], 'Admin') !== false) ? '../../User/php/' : '';
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -21,10 +25,13 @@
                     <?php if (isset($_SESSION['username'])): ?>
                         <a href="dashboard.php" class="nav-link">Dashboard</a>
                         <a href="logout.php" class="btn-logout">Logout</a>
-                        <?php else: ?>
+                    <?php else: ?>
+                        <?php
+                        $loginPath = (strpos($_SERVER['REQUEST_URI'], 'Admin') !== false) ? 'login.php' : '../../Admin/php/login.php';
+                        ?>
                         <a href="../../Admin/php/login.php" class="nav-link">Login</a>
                         <a href="register.php" class="btn-signup">Sign Up</a>
-                        <?php endif; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
