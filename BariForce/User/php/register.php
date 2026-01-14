@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once '../db/db_connect.php';
 $error = "";
 $success = "";
 
@@ -14,8 +14,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($password !== $confirm_pass) {
         $error = "Passwords do not match!";
     } else {
-        $success = "Registration Successful! You can now login.";
+        $checkSQL = "SELECT * FROM users WHERE username = '$username' OR email = '$email'";
+        $result = $conn->query($checkSQL);
+
+        if ($result->num_rows > 0) {
+            $error = "Username or Email already exists!";
+        } else {
+            $sql = "INSERT INTO users (fullname, username, email, password, role) 
+                    VALUES ('$fullname', '$username', '$email', '$password', 'user')";
+            if ($conn->query($sql) === TRUE) {
+                $success = "Registration Successful! You can now login.";
+            } else {
+                $error = "Error: " . $conn->error;
+            }
+        }
     }
+
+
 }
 ?>
 
