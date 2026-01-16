@@ -110,14 +110,61 @@ $user = $result->fetch_assoc();
             </div>
             <div class="stat-card">
                 <div class="icon-box done-icon"><i class="fas fa-check-circle"></i></div>
+                
                 <div class="stat-info">
-                    <h2>05</h2>
+                 
+                <h2>05</h2>
+                 
                     <p>Done</p>
+                
                 </div>
-            </div>
+            <
+            div>
         </div>
-
-
+        <div class="table-section">
+                <div class="table-header">
+                    <h3>Recent Activity</h3>
+                    <a href="#">View All</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-broom service-icon"></i> Home Cleaning</td>
+                            <td>15 Jan, 2026</td>
+                            <td><span class="badge badge-pending">Pending</span></td>
+                            <td>৳ 500</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-bolt service-icon"></i> Electrical Repair</td>
+                            <td>10 Jan, 2026</td>
+                            <td><span class="badge badge-success">Completed</span></td>
+                            <td>৳ 350</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-paint-roller service-icon"></i> Wall Painting</td>
+                            <td>05 Jan, 2026</td>
+                            <td><span class="badge badge-cancel">Cancelled</span></td>
+                            <td>৳ 0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+ 
+        </main>
+    </div>
+ 
+    <?php include 'footer.php'; ?>
+   
+    <script src="../JS/dashboard.js"></script>
+    <script src="../js/themeToggle.js"></script>
+ 
 </body>
-
 </html>
