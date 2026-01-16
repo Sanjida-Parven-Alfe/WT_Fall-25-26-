@@ -106,6 +106,56 @@ $user = $result->fetch_assoc();
             <a href="logout.php" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
     </aside>
+    <main class="main-content">
+
+        <div class="form-container">
+            <h2>Update Profile</h2>
+
+            <?php if ($msg): ?>
+                <div class="alert <?php echo $msg_type; ?>">
+                    <?php echo $msg; ?>
+                </div>
+            <?php endif; ?>
+
+            <form method="POST" action="">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" name="fullname" value="<?php echo htmlspecialchars($user['fullname']); ?>"
+                            required>
+                    </div>
+                    <div class="input-group">
+                        <label>Username (Cannot Change)</label>
+                        <input type="text" value="<?php echo htmlspecialchars($user['username']); ?>" disabled
+                            class="disabled-input">
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>"
+                            required>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="text" name="phone"
+                            value="<?php echo isset($user['phone']) ? htmlspecialchars($user['phone']) : ''; ?>"
+                            placeholder="+8801xxxxxxxxx">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Address</label>
+                    <textarea name="address" rows="3"
+                        placeholder="Enter your full address"><?php echo isset($user['address']) ? htmlspecialchars($user['address']) : ''; ?></textarea>
+                </div>
+
+                <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+        </div>
+
+    </main>
 </body>
 
 </html>
