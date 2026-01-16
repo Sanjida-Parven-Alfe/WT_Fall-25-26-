@@ -59,7 +59,7 @@ $user = $result->fetch_assoc();
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link">
+                <a href="profile.php" class="nav-link">
                     <i class="fas fa-user-edit"></i> Edit Profile
                 </a>
             </li>
