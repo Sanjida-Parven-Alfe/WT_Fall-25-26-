@@ -17,7 +17,7 @@ $user = $result->fetch_assoc();
 <html>
 
 <head>
-   
+
     <title>User Dashboard - BariForce</title>
 
     <link rel="stylesheet" href="../CSS/footer.css">
@@ -28,6 +28,59 @@ $user = $result->fetch_assoc();
 <body>
 
     <div class="dashboard-wrapper"></div>
+    <aside class="sidebar">
+        <div class="profile-section">
+            <div class="img-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User">
+            </div>
+            <h3>
+                <?php echo htmlspecialchars($user['fullname']); ?>
+            </h3>
+            <p>User Dashboard</p>
+        </div>
+
+        <ul class="nav-menu">
+            <li>
+                <a href="home.php" class="nav-link home-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </li>
+
+            <li class="menu-spacer"></li>
+
+            <li>
+                <a href="#" class="nav-link active">
+                    <i class="fas fa-th-large"></i> Overview
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-calendar-check"></i> My Bookings
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-user-edit"></i> Edit Profile
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-lock"></i> Change Password
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-headset"></i> Support
+                </a>
+            </li>
+        </ul>
+
+        <div class="logout-section">
+            <a href="logout.php" class="logout-link">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </aside>
 
 
 </body>
