@@ -62,7 +62,7 @@ body {
   font-size: 0.85rem;
   color: #7f8c8d;
 }
-/* Menu Items */
+
 .nav-menu {
   list-style: none;
   flex-grow: 1;
@@ -130,4 +130,47 @@ body {
 
 .logout-link:hover {
   background-color: #fff5f5;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.welcome-banner {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  padding: 35px;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+}
+
+.banner-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+.banner-text p {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.new-service-btn {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.new-service-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
