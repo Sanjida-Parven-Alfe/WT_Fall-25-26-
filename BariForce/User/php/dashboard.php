@@ -81,6 +81,41 @@ $user = $result->fetch_assoc();
             </a>
         </div>
     </aside>
+    <main class="main-content">
+
+        <div class="welcome-banner">
+            <div class="banner-text">
+                <h1>Hello,
+                    <?php echo htmlspecialchars($user['username']); ?>! 👋
+                </h1>
+                <p>Welcome back to your service dashboard.</p>
+            </div>
+            <button class="new-service-btn">+ New Service</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="icon-box pending-icon"><i class="fas fa-clock"></i></div>
+                <div class="stat-info">
+                    <h2>02</h2>
+                    <p>Pending</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="icon-box active-icon"><i class="fas fa-tools"></i></div>
+                <div class="stat-info">
+                    <h2>01</h2>
+                    <p>Active</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="icon-box done-icon"><i class="fas fa-check-circle"></i></div>
+                <div class="stat-info">
+                    <h2>05</h2>
+                    <p>Done</p>
+                </div>
+            </div>
+        </div>
 
 
 </body>
