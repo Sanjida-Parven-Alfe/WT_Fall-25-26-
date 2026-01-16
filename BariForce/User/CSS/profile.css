@@ -77,3 +77,20 @@ textarea { resize: none; }
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
 }
+
+.alert {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+ 
+
+@media (max-width: 768px) {
+    .input-row { flex-direction: column; gap: 0; }
+    .form-container { padding: 25px; }
+}
