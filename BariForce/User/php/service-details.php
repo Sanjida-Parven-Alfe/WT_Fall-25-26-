@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
 
     } else {
 
-        echo "Service not found!"; 
+        echo "Service not found!";
 
         exit();
 
@@ -28,7 +28,7 @@ if (isset($_GET['id'])) {
 
 } else {
 
-    
+
 
     header("Location: home.php");
 
@@ -90,3 +90,70 @@ if (isset($_GET['id'])) {
                         <?php endforeach; ?>
                     </ul>
                 </div>
+                <div class="section-box reviews">
+                    <h2>Customer Reviews</h2>
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User">
+                            <div>
+                                <h4>Rahim Ahmed</h4>
+                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Excellent service! The team was very professional."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-right">
+                <div class="booking-card">
+                    <h3>Booking Summary</h3>
+
+                    <div class="price-tag">
+                        <span id="display-price">৳
+                            <?php echo $service['base_price']; ?>
+                        </span>
+                        <small>/ unit</small>
+                    </div>
+
+                    <div class="calculator">
+                        <label>Select Quantity / Hours</label>
+                        <div class="qty-control">
+                            <button onclick="updatePrice(-1)">-</button>
+                            <span id="qty">1</span>
+                            <button onclick="updatePrice(1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="total-row">
+                        <span>Total Payable:</span>
+                        <span id="total-price">৳
+                            <?php echo $service['base_price']; ?>
+                        </span>
+                    </div>
+
+                    <input type="hidden" id="base-price" value="<?php echo $service['base_price']; ?>">
+
+                    <a href="booking.php?service_id=<?php echo $service['id']; ?>" id="book-btn" class="book-now-btn">
+
+                        Book Now <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <p class="security-note"><i class="fas fa-shield-alt"></i> 100% Safe & Secure Payment</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <?php include 'footer.php'; ?>
+
+    <script src="../JS/service-details.js"></script>
+
+</body>
+
+</html>
