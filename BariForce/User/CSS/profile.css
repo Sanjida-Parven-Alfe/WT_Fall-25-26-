@@ -1,0 +1,16 @@
+
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+    max-width: 800px;
+}
+ 
+.form-container h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #f4f7fa;
+    padding-bottom: 15px;
+}
