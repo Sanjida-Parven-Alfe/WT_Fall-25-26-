@@ -156,6 +156,13 @@ $user = $result->fetch_assoc();
         </div>
 
     </main>
+    </div>
+
+    <?php include 'footer.php'; ?>
+    <script src="../JS/dashboard.js"></script>
+    <script src="../js/themeToggle.js"></script>
+
+
 </body>
 
 </html>
