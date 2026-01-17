@@ -148,6 +148,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </span>
                         </div>
                     </div>
+                    <div class="price-breakdown">
+                        <div class="line-item">
+                            <span>Base Price</span>
+                            <span>৳ <?php echo number_format($service['base_price'], 2); ?></span>
+                        </div>
+                        <div class="line-item">
+                            <span>Quantity / Unit</span>
+                            <span>x <?php echo $qty; ?></span>
+                        </div>
+                        <div class="line-item discount">
+                            <span>Platform Fee</span>
+                            <span>৳ 0.00</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="line-item total">
+                            <span>Total Payable</span>
+                            <span class="amount">৳ <?php echo number_format($total_calculated, 2); ?></span>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="final_qty" value="<?php echo $qty; ?>">
+                    <input type="hidden" name="final_price" value="<?php echo $total_calculated; ?>">
+
+                    <button type="submit" class="confirm-btn">
+                        Confirm Booking <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                    <p class="security-note"><i class="fas fa-shield-alt"></i> SSL Secured Checkout</p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <?php include 'footer.php'; ?>
+    <script src="../js/themeToggle.js"></script>
+
+
 </body>
 
 </html>
