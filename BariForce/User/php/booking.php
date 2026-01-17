@@ -109,6 +109,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </strong>
                     </div>
                 </div>
+                <div class="input-card">
+                    <h3><span class="step">3</span> Payment Method</h3>
+                    <div class="payment-methods">
+                        <label class="pay-option selected">
+                            <input type="radio" name="payment" value="cod" checked>
+                            <div class="pay-content">
+                                <i class="fas fa-money-bill-wave icon"></i>
+                                <span>Cash After Service</span>
+                            </div>
+                            <i class="fas fa-check-circle check-icon"></i>
+                        </label>
+
+                        <label class="pay-option disabled">
+                            <input type="radio" name="payment" value="bkash" disabled>
+                            <div class="pay-content">
+                                <i class="fas fa-credit-card icon"></i>
+                                <span>Online Payment <small>(Coming Soon)</small></span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="summary-section">
+                <div class="summary-card">
+                    <h3>Order Summary</h3>
+
+                    <div class="service-preview">
+                        <img src="<?php echo $service['image_url']; ?>" alt="Service Image">
+                        <div class="svc-info">
+                            <h4>
+                                <?php echo $service['name']; ?>
+                            </h4>
+                            <span class="category-tag">
+                                <?php echo strtoupper($service['category']); ?>
+                            </span>
+                        </div>
+                    </div>
 </body>
 
 </html>
