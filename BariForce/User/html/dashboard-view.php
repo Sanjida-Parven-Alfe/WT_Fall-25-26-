@@ -98,7 +98,8 @@
             </div>
 
         </main>
-    </div> <script src="../JS/dashboard.js"></script>
+    </div> 
+    <script src="../JS/dashboard.js"></script>
 
 </body>
 </html>
