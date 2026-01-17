@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once '../db/db_connect.php';
 
 if (isset($_SESSION['username'])) {
     if ($_SESSION['role'] == 'admin') {
@@ -16,15 +17,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    if ($username == "admin" && $password == "1234") {
-        $_SESSION['username'] = $username;
-        $_SESSION['role'] = 'admin';
-        header("Location: dashboard.php");
-        exit();
-    } elseif ($username == "user" && $password == "1234") {
-        $_SESSION['username'] = $username;
-        $_SESSION['role'] = 'user';
-        header("Location: ../../User/php/home.php");
+    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['role'] = $row['role'];
+
+        if ($row['role'] == 'admin') {
+            header("Location: dashboard.php");
+        } else {
+            header("Location: ../../User/php/home.php");
+        }
         exit();
     } else {
         $error = "Invalid Username or Password!";
