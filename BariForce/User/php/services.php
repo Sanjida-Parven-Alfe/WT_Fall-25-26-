@@ -1,6 +1,10 @@
 <?php
 
 session_start();
+require_once '../db/db_connect.php';
+
+$sql = "SELECT * FROM services";
+$result = $conn->query($sql);
 
 ?>
 
@@ -39,85 +43,46 @@ session_start();
     </div>
     <div class="services-container">
 
-        <div class="service-card" data-category="cleaning">
-            <div class="card-img">
-                <img src="https://img.freepik.com/free-photo/cleaning-service-concept_1_1150-15638.jpg?w=740"
-                    alt="Home Cleaning">
-            </div>
-            <div class="card-content">
-                <div class="rating"><i class="fas fa-star"></i> 4.8 (120 Reviews)</div>
-                <h3>Home Deep Cleaning</h3>
-                <p>Full home deep cleaning service with professional equipment.</p>
-                <div class="card-footer">
-                    <span class="price">Starts $50</span>
-                    <a href="booking.php?service=cleaning" class="book-btn">Book Now</a>
-                </div>
-            </div>
-        </div>
+        <?php
 
-        <div class="service-card" data-category="electrical">
-            <div class="card-img">
-                <img src="https://img.freepik.com/free-photo/electrician-working-switchboard_1_1150-15638.jpg?w=740"
-                    alt="Electrician">
-            </div>
-            <div class="card-content">
-                <div class="rating"><i class="fas fa-star"></i> 4.9 (85 Reviews)</div>
-                <h3>Electrical Repair</h3>
-                <p>Fixing switchboards, fans, lights, and wiring issues.</p>
-                <div class="card-footer">
-                    <span class="price">Starts $20</span>
-                    <a href="booking.php?service=electrical" class="book-btn">Book Now</a>
-                </div>
-            </div>
-        </div>
+        if ($result->num_rows > 0) {
 
-        <div class="service-card" data-category="plumbing">
-            <div class="card-img">
-                <img src="https://img.freepik.com/free-photo/plumber-fixing-white-sink-pipe-with-adjustable-wrench_169016-143… alt="
-                    Plumbing">
-            </div>
-            <div class="card-content">
-                <div class="rating"><i class="fas fa-star"></i> 4.7 (90 Reviews)</div>
-                <h3>Plumbing Service</h3>
-                <p>Leakage repair, pipe fitting, and basin installation.</p>
-                <div class="card-footer">
-                    <span class="price">Starts $30</span>
-                    <a href="booking.php?service=plumbing" class="book-btn">Book Now</a>
-                </div>
-            </div>
-        </div>
+            while ($row = $result->fetch_assoc()) {
+                ?>
 
-        <div class="service-card" data-category="cleaning">
-            <div class="card-img">
-                <img src="https://img.freepik.com/free-photo/man-polishing-car-garage_1157-26053.jpg?w=740"
-                    alt="Car Wash">
-            </div>
-            <div class="card-content">
-                <div class="rating"><i class="fas fa-star"></i> 5.0 (200 Reviews)</div>
-                <h3>Car Wash & Polish</h3>
-                <p>Premium car foam wash and polishing at your doorstep.</p>
-                <div class="card-footer">
-                    <span class="price">Starts $40</span>
-                    <a href="booking.php?service=carwash" class="book-btn">Book Now</a>
-                </div>
-            </div>
-        </div>
+                <div class="service-card" data-category="<?php echo strtolower($row['category']); ?>">
 
-        <div class="service-card" data-category="shifting">
-            <div class="card-img">
-                <img src="https://img.freepik.com/free-photo/delivery-concept-handsome-african-american-delivery-man-carrying… alt="
-                    Shifting">
-            </div>
-            <div class="card-content">
-                <div class="rating"><i class="fas fa-star"></i> 4.6 (50 Reviews)</div>
-                <h3>House Shifting</h3>
-                <p>Hassle-free house and office shifting service.</p>
-                <div class="card-footer">
-                    <span class="price">Custom Price</span>
-                    <a href="booking.php?service=shifting" class="book-btn">Book Now</a>
+                    <div class="card-img">
+                        <img src="<?php echo htmlspecialchars($row['image_url']); ?>"
+                            alt="<?php echo htmlspecialchars($row['name']); ?>">
+                    </div>
+
+                    <div class="card-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> <?php echo $row['rating']; ?> (100+ Reviews)
+                        </div>
+
+                        <h3><?php echo htmlspecialchars($row['name']); ?></h3>
+
+                        <p><?php echo htmlspecialchars(substr($row['description'], 0, 80)) . '...'; ?></p>
+
+                        <div class="card-footer">
+                            <span class="price">Starts ৳<?php echo $row['base_price']; ?></span>
+
+                            <a href="service-details.php?id=<?php echo $row['id']; ?>" class="book-btn">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+
+                <?php
+            }
+        } else {
+
+            echo "<p style='text-align:center; width:100%; color: #666;'>No services found available at the moment.</p>";
+        }
+        ?>
 
     </div>
     <?php include 'footer.php'; ?>
