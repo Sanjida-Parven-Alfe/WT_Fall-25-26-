@@ -16,7 +16,6 @@
     <section class="home-section">
         <nav>
             <div class="sidebar-button">
-                <i class="fas fa-bars sidebarBtn"></i>
                 <span class="dashboard">Dashboard Overview</span>
             </div>
 

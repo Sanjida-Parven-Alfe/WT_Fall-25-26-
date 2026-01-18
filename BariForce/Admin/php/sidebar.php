@@ -8,6 +8,13 @@
             <span class="logo_name">BariForce</span>
         </div>
         <ul class="nav-links">
+
+            <li style="margin-top: auto;"> <a href="../../User/php/home.php">
+                    <i class="fas fa-home"></i>
+                    <span class="links_name">Back to Home</span>
+                </a>
+            </li>
+
             <li>
                 <a href="dashboard.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : ''; ?>">
                     <i class="fas fa-th-large"></i>
