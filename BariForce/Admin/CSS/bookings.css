@@ -1,0 +1,113 @@
+.table-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow-x: auto; 
+    border: 1px solid #eef2f6;
+    margin-top: 20px;
+}
+
+.table-container .title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-left: 10px;
+    border-left: 5px solid #4a90e2;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0 10px; 
+    white-space: nowrap;
+}
+
+thead th {
+    background-color: #f8f9fa;
+    color: #555;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 15px 20px;
+    border: none;
+}
+
+tbody tr {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    z-index: 10;
+    position: relative;
+}
+
+td {
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    color: #333;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+td:first-child { border-left: 1px solid #f0f0f0; border-top-left-radius: 8px; border-bottom-left-radius: 8px; }
+td:last-child { border-right: 1px solid #f0f0f0; border-top-right-radius: 8px; border-bottom-right-radius: 8px; }
+
+td small {
+    display: block;
+    margin-top: 4px;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 6px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-confirm { 
+    background: #e0f2f1; color: #009688; 
+}
+.btn-confirm:hover { 
+    background: #009688; color: white; 
+}
+
+.btn-cancel { 
+    background: #ffebee; color: #e53935; 
+}
+.btn-cancel:hover { 
+    background: #e53935; color: white; 
+}
+
+.btn-complete { 
+    background: #e3f2fd; color: #1e88e5; width: auto; padding: 0 12px; font-weight: 600;
+}
+.btn-complete:hover { 
+    background: #1e88e5; color: white; 
+}
+
+
+.status-text {
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
