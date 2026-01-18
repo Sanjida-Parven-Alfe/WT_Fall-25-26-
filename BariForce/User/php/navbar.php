@@ -3,11 +3,23 @@ $isInAdmin = (strpos($_SERVER['SCRIPT_NAME'], '/Admin/php/') !== false);
 
 if ($isInAdmin) {
     $pathPrefix = "../../User/php/";
-    $loginPath = "login.php"; 
+    $loginPath = "login.php";
 } else {
     $pathPrefix = "";
     $loginPath = "../../Admin/php/login.php";
 }
+$dashboardLink = $pathPrefix . "dashboard.php";
+
+if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
+    if ($isInAdmin) {
+
+        $dashboardLink = "dashboard.php";
+    } else {
+
+        $dashboardLink = "../../Admin/php/dashboard.php";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
