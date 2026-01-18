@@ -9,6 +9,11 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
+if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
+    header("Location: ../../Admin/php/dashboard.php");
+    exit();
+}
+
 $username = $_SESSION['username'];
 
 $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
