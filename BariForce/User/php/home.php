@@ -111,6 +111,26 @@ $result = $conn->query($sql); ?>
         </div>
     </section>
 
+    <section class="section-container features">
+        <div class="feature-grid">
+            <div class="feature-box">
+                <i class="fas fa-user-shield"></i>
+                <h3>Verified Experts</h3>
+                <p>Every professional is background checked and verified.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Transparent Pricing</h3>
+                <p>No hidden charges. Pay exactly what you see.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our dedicated team is here to help you anytime.</p>
+            </div>
+        </div>
+    </section>
+
     <?php include 'footer.php'; ?>
 
     <script src="../js/themeToggle.js"></script>
