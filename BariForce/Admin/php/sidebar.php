@@ -45,6 +45,12 @@
                     <span class="links_name">Job Requests</span>
                 </a>
             </li>
+            <li>
+                <a href="reviews.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'reviews.php' ? 'active' : ''; ?>">
+                    <i class='fas fa-comments'></i>
+                    <span class="links_name">Reviews</span>
+                </a>
+            </li>
             <li class="log_out">
                 <a href="../../User/php/logout.php">
                     <i class="fas fa-sign-out-alt"></i>
