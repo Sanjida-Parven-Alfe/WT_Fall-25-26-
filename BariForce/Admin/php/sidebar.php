@@ -52,9 +52,8 @@
                 </a>
             </li>
             <li class="log_out">
-                <a href="../../User/php/logout.php">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span class="links_name">Log out</span>
+                <a href="logout.php" class="logout-link">
+                    <i class="fas fa-sign-out-alt"></i> Logout
                 </a>
             </li>
         </ul>
