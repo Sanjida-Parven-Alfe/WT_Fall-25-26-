@@ -62,6 +62,7 @@
     </section>
 
     <script src="../JS/join-us.js"></script>
+    <script src="../../User/js/themeToggle.js"></script>
 
     <?php include '../../User/php/footer.php'; ?>
     
