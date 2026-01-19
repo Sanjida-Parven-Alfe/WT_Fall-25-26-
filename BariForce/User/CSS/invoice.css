@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.invoice-container {
+  min-height: 100vh;
+  background-color: #f4f7f6;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.invoice-card {
+  background: white;
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.company-info h1 {
+  color: #4a90e2;
+  font-size: 2rem;
+}
+.company-info p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.invoice-meta {
+  text-align: right;
+}
+.invoice-meta h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.invoice-meta p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+.badge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+.badge.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.invoice-body {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.invoice-body h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.invoice-body p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+.invoice-table th {
+  background: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+.invoice-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+.text-right {
+  text-align: right;
+}
+
+.invoice-table tfoot td {
+  border-top: 2px solid #333;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+  padding-top: 15px;
+}
+.amount {
+  color: #4a90e2 !important;
+}
+
+.invoice-footer {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px dashed #ddd;
+  padding-top: 20px;
+}
+.invoice-footer p {
+  color: #888;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-print,
+.btn-home {
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.btn-print {
+  background: #2c3e50;
+  color: white;
+  border: none;
+}
+.btn-print:hover {
+  background: #1a252f;
+}
+
+.btn-home {
+  background: #4a90e2;
+  color: white;
+  border: none;
+}
+.btn-home:hover {
+  background: #357abd;
+}
+
+@media print {
+  .navbar,
+  .footer-container,
+  .action-buttons,
+  .theme-btn {
+    display: none !important;
+  }
+  .invoice-container {
+    padding: 0;
+    background: white;
+  }
+  .invoice-card {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+}
+
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+body.dark-mode .invoice-container {
+  background-color: #121212 !important;
+}
+body.dark-mode .invoice-card {
+  background-color: #1e1e1e !important;
+  color: white !important;
+  border: 1px solid #333 !important;
+}
+body.dark-mode .company-info h1 {
+  color: #ffffff !important;
+}
+body.dark-mode .invoice-header {
+  border-bottom-color: #333 !important;
+}
+body.dark-mode .invoice-meta h3 {
+  color: #fff !important;
+}
+body.dark-mode .invoice-meta p,
+body.dark-mode .invoice-body p {
+  color: #b0b3b8 !important;
+}
+body.dark-mode .invoice-body h4 {
+  color: #e4e6eb !important;
+  border-bottom-color: #333 !important;
+}
+body.dark-mode .invoice-table th {
+  background-color: #2c2c2c !important;
+  color: white !important;
+  border-bottom-color: #444 !important;
+}
+body.dark-mode .invoice-table td {
+  color: #b0b3b8 !important;
+  border-bottom-color: #333 !important;
+}
+body.dark-mode .invoice-table tfoot td {
+  border-top-color: #555 !important;
+  color: white !important;
+}
+body.dark-mode .btn-print {
+  background: #333 !important;
+  color: white !important;
+  border: 1px solid #555 !important;
+}
