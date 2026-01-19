@@ -33,6 +33,7 @@ $done_count = $c_query->fetch_assoc()['count'];
 $recent_sql = "SELECT b.*, s.name as service_name FROM bookings b JOIN services s ON b.service_id = s.id WHERE b.user_id = $user_id ORDER BY b.booking_date DESC LIMIT 5";
 $recent_bookings = $conn->query($recent_sql);
 
+$page = isset($_GET['page']) ? $_GET['page'] : 'overview';
 require_once '../html/dashboard-view.php';
 
 ?>

@@ -30,7 +30,8 @@
                 </a>
             </li>
             <li>
-                <a href="my-bookings.php" class="nav-link">
+                <a href="dashboard.php?page=bookings"
+                    class="nav-link <?php echo $page == 'bookings' ? 'active' : ''; ?>">
                     <i class="fas fa-calendar-check"></i> My Bookings
                 </a>
             </li>
