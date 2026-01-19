@@ -75,3 +75,22 @@
     transition: 0.3s;
 }
 
+.btn-reply { 
+    background: #27ae60;
+}
+.btn-reply:hover { 
+    background: #219150;
+}
+
+.btn-delete { 
+    background: #e74c3c;
+}
+.btn-delete:hover { 
+    background: #c0392b;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+}
