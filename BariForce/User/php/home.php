@@ -1,8 +1,8 @@
-<?php session_start(); 
-require_once '../db/db_connect.php'; 
+<?php session_start();
+require_once '../db/db_connect.php';
 
 $sql = "SELECT * FROM services ORDER BY rating DESC LIMIT 3";
-$result = $conn->query($sql);?>
+$result = $conn->query($sql); ?>
 
 <!DOCTYPE html>
 <html>
@@ -34,8 +34,41 @@ $result = $conn->query($sql);?>
         </div>
 
         <div class="hero-image">
-            <img src="https://img.freepik.com/free-vector/cleaning-service-concept-illustration_114360-98.jpg?w=740"
-                alt="Home Service Animation">
+            <img src="../images/hero-banner.png" alt="Home Service Animation">
+        </div>
+    </section>
+
+    <section class="section-container categories">
+        <div class="section-header">
+            <h2>Explore Categories</h2>
+            <p>Select a category to find the right service for you</p>
+        </div>
+
+        <div class="category-grid">
+            <a href="services.php?cat=cleaning" class="cat-card">
+                <div class="icon-box"><i class="fas fa-broom"></i></div>
+                <span>Cleaning</span>
+            </a>
+            <a href="services.php?cat=electrical" class="cat-card">
+                <div class="icon-box"><i class="fas fa-bolt"></i></div>
+                <span>Electrical</span>
+            </a>
+            <a href="services.php?cat=plumbing" class="cat-card">
+                <div class="icon-box"><i class="fas fa-faucet"></i></div>
+                <span>Plumbing</span>
+            </a>
+            <a href="services.php?cat=ac" class="cat-card">
+                <div class="icon-box"><i class="fas fa-wind"></i></div>
+                <span>AC Repair</span>
+            </a>
+            <a href="services.php?cat=painting" class="cat-card">
+                <div class="icon-box"><i class="fas fa-paint-roller"></i></div>
+                <span>Painting</span>
+            </a>
+            <a href="services.php?cat=shifting" class="cat-card">
+                <div class="icon-box"><i class="fas fa-truck-loading"></i></div>
+                <span>Shifting</span>
+            </a>
         </div>
     </section>
 
