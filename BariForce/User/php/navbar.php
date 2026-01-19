@@ -5,10 +5,12 @@ if ($isInAdmin) {
     $pathPrefix = "../../User/php/";
     $loginPath = "login.php";
     $joinUsPath = "join-us.php";
+    $logoutPath = "logout.php";
 } else {
     $pathPrefix = "";
     $loginPath = "../../Admin/php/login.php";
     $joinUsPath = "../../Admin/php/join-us.php";
+    $logoutPath = "../../Admin/php/logout.php";
 }
 $dashboardLink = $pathPrefix . "dashboard.php";
 
@@ -47,11 +49,11 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
                 </button>
 
                 <?php if (isset($_SESSION['username'])): ?>
-                    <a href="<?php echo $pathPrefix; ?>dashboard.php" class="nav-link">Dashboard</a>
+                    <a href="<?php echo $dashboardLink; ?>dashboard.php" class="nav-link">Dashboard</a>
                     <?php if($_SESSION['role'] == 'user'): ?>
                         <a href="<?php echo $joinUsPath; ?>" class="btn-signup">Join Team</a>
                     <?php endif; ?>
-                    <a href="<?php echo $pathPrefix; ?>logout.php" class="btn-logout">Logout</a>
+                    <a href="<?php echo $logoutPath; ?>logout.php" class="btn-logout">Logout</a>
                 <?php else: ?>
                     <a href="<?php echo $loginPath; ?>" class="nav-link">Login</a>
                   <a href="<?php echo $joinUsPath; ?>" class="btn-signup">Join Us</a>
