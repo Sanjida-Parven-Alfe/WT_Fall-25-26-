@@ -1,0 +1,42 @@
+.admin-container {
+    display: flex; 
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #f4f7f6;
+    padding: 30px;
+}
+
+.message-container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-top: 20px;
+    overflow-x: auto; 
+}
+
+.message-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.message-table th {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: left;
+    color: #555;
+    border-bottom: 2px solid #eee;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.message-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
