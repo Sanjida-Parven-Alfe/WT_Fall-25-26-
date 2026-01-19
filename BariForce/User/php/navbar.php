@@ -49,7 +49,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
                 </button>
 
                 <?php if (isset($_SESSION['username'])): ?>
-                    <a href="<?php echo $dashboardLink; ?>dashboard.php" class="nav-link">Dashboard</a>
+                   <a href="<?php echo $dashboardLink; ?>" class="nav-link">Dashboard</a>
                     <?php if($_SESSION['role'] == 'user'): ?>
                         <a href="<?php echo $joinUsPath; ?>" class="btn-signup">Join Team</a>
                     <?php endif; ?>
