@@ -1,0 +1,153 @@
+.join-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7f6;
+    padding: 40px 20px;
+}
+
+.join-card {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-header h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card-header p {
+    color: #7f8c8d;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #eef2f6;
+    border-radius: 8px;
+    font-size: 1rem;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.select-wrapper select:focus {
+    border-color: #2ecc71;
+    outline: none;
+}
+
+.select-wrapper i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #95a5a6;
+    pointer-events: none;
+}
+
+.file-upload {
+    position: relative;
+    height: 60px;
+}
+
+.file-upload input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.file-dummy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #7f8c8d;
+    transition: 0.3s;
+    background: #fafafa;
+}
+
+.file-upload input:hover+.file-dummy {
+    border-color: #2ecc71;
+    background: #f0fdf4;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+.alert {
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.error-text {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+}
