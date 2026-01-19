@@ -100,20 +100,6 @@ body {
   transform: translateY(-3px);
 }
 
-.btn-secondary {
-  color: var(--secondary);
-  text-decoration: none;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: 0.3s;
-}
-
-.btn-secondary:hover {
-  color: var(--primary);
-  gap: 15px;
-}
 .hero-image {
   flex: 1;
   display: flex;
