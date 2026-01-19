@@ -182,3 +182,27 @@ body {
   transform: translateY(-5px);
   border-color: var(--primary);
 }
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(74, 144, 226, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: 0.3s;
+}
+
+.cat-card:hover .icon-box {
+  background: var(--primary);
+  color: white;
+}
+
+.cat-card span {
+  color: var(--secondary);
+  font-weight: 600;
+}
