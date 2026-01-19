@@ -51,6 +51,11 @@
                     <span class="links_name">Reviews</span>
                 </a>
             </li>
+            <li>
+                <a href="messages.php">
+                    <i class="fas fa-envelope"></i> Messages
+                </a>
+            </li>
             <li class="log_out">
                 <a href="logout.php" class="logout-link">
                     <i class="fas fa-sign-out-alt"></i> Logout
