@@ -151,3 +151,52 @@
     margin-top: 5px;
     display: block;
 }
+
+body.dark-mode .join-container {
+    background-color: #121212;
+}
+
+body.dark-mode .join-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .card-header h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .card-header p {
+    color: #b0b3b8;
+}
+
+body.dark-mode .form-group label {
+    color: #e4e6eb;
+}
+
+body.dark-mode .select-wrapper select,
+body.dark-mode .form-group input {
+    background-color: #242526;
+    border-color: #3a3b3c;
+    color: #ffffff;
+}
+
+body.dark-mode .select-wrapper select:focus,
+body.dark-mode .form-group input:focus {
+    border-color: #2ecc71;
+}
+
+body.dark-mode .file-dummy {
+    background-color: #242526;
+    border-color: #3a3b3c;
+    color: #b0b3b8;
+}
+
+body.dark-mode .file-upload input:hover+.file-dummy {
+    background-color: #3a3b3c;
+    border-color: #2ecc71;
+}
+
+body.dark-mode .select-wrapper i {
+    color: #b0b3b8;
+}
