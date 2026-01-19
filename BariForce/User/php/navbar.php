@@ -53,7 +53,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
                     <?php if($_SESSION['role'] == 'user'): ?>
                         <a href="<?php echo $joinUsPath; ?>" class="btn-signup">Join Team</a>
                     <?php endif; ?>
-                    <a href="<?php echo $logoutPath; ?>logout.php" class="btn-logout">Logout</a>
+                   <a href="<?php echo $logoutPath; ?>" class="btn-logout">Logout</a>
                 <?php else: ?>
                     <a href="<?php echo $loginPath; ?>" class="nav-link">Login</a>
                   <a href="<?php echo $joinUsPath; ?>" class="btn-signup">Join Us</a>
