@@ -4,9 +4,11 @@ $isInAdmin = (strpos($_SERVER['SCRIPT_NAME'], '/Admin/php/') !== false);
 if ($isInAdmin) {
     $pathPrefix = "../../User/php/";
     $loginPath = "login.php";
+    $joinUsPath = "join-us.php";
 } else {
     $pathPrefix = "";
     $loginPath = "../../Admin/php/login.php";
+    $joinUsPath = "../../Admin/php/join-us.php";
 }
 $dashboardLink = $pathPrefix . "dashboard.php";
 
@@ -46,10 +48,13 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
 
                 <?php if (isset($_SESSION['username'])): ?>
                     <a href="<?php echo $pathPrefix; ?>dashboard.php" class="nav-link">Dashboard</a>
+                    <?php if($_SESSION['role'] == 'user'): ?>
+                        <a href="<?php echo $joinUsPath; ?>" class="btn-signup">Join Team</a>
+                    <?php endif; ?>
                     <a href="<?php echo $pathPrefix; ?>logout.php" class="btn-logout">Logout</a>
                 <?php else: ?>
                     <a href="<?php echo $loginPath; ?>" class="nav-link">Login</a>
-                    <a href="<?php echo $pathPrefix; ?>register.php" class="btn-signup">Sign Up</a>
+                  <a href="<?php echo $joinUsPath; ?>" class="btn-signup">Join Us</a>
                 <?php endif; ?>
             </div>
         </div>
