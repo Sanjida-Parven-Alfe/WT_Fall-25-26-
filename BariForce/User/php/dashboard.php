@@ -5,7 +5,6 @@ session_start();
 require_once '../db/db_connect.php';
 require_once 'edit-profile.php';
 require_once 'change-password.php';
-require_once 'support.php';
 
 if (!isset($_SESSION['username'])) {
     header("Location: ../../Admin/php/login.php");
@@ -24,6 +23,7 @@ $stmt->bind_param("s", $username);
 $stmt->execute();
 $user = $stmt->get_result()->fetch_assoc();
 $user_id = $user['id'];
+require_once 'support.php';
 $p_query = $conn->query("SELECT COUNT(*) as count FROM bookings WHERE user_id = $user_id AND status = 'pending'");
 $pending_count = $p_query->fetch_assoc()['count'];
 
