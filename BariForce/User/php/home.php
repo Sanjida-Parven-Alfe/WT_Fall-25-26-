@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php session_start(); 
+require_once '../db/db_connect.php'; 
+
+$sql = "SELECT * FROM services ORDER BY rating DESC LIMIT 3";
+$result = $conn->query($sql);?>
+
 <!DOCTYPE html>
 <html>
 
