@@ -72,6 +72,45 @@ $result = $conn->query($sql); ?>
         </div>
     </section>
 
+    <section class="section-container trending">
+        <div class="section-header">
+            <h2>Trending Services</h2>
+            <p>Most booked services by our customers</p>
+        </div>
+
+        <div class="service-grid">
+            <?php if ($result->num_rows > 0): ?>
+                <?php while ($row = $result->fetch_assoc()): ?>
+                    <div class="service-card">
+                        <div class="card-image">
+                            <img src="<?php echo $row['image_url']; ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
+                            <span class="price-tag">৳
+                                <?php echo $row['base_price']; ?>
+                            </span>
+                        </div>
+                        <div class="card-content">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <?php echo $row['rating']; ?> (120 Reviews)
+                            </div>
+                            <h3>
+                                <?php echo htmlspecialchars($row['name']); ?>
+                            </h3>
+                            <a href="service-details.php?id=<?php echo $row['id']; ?>" class="book-btn">Book Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <p class="no-data">No services available right now.</p>
+            <?php endif; ?>
+        </div>
+
+        <div class="view-all-container">
+            <a href="services.php" class="btn-secondary">View All Services</a>
+        </div>
+    </section>
+
     <?php include 'footer.php'; ?>
 
     <script src="../js/themeToggle.js"></script>
