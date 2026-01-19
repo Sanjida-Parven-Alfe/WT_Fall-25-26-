@@ -18,11 +18,13 @@
 
         <main class="main-content">
             <?php
-            // ✅ ১. এই লজিকটুকু ঠিক <main> এর পরেই বসাবি
+
             if ($page == 'profile') {
                 include 'edit-profile-view.php';
             } elseif ($page == 'password') {
                 include 'change-password-view.php';
+            } elseif ($page == 'support') {
+                include 'support-view.php';
             } elseif ($page == 'bookings') {
                 include 'my-bookings-view.php';
             } else {

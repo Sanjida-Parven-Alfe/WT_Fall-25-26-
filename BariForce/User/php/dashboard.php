@@ -3,6 +3,9 @@
 session_start();
 
 require_once '../db/db_connect.php';
+require_once 'edit-profile.php';
+require_once 'change-password.php';
+require_once 'support.php';
 
 if (!isset($_SESSION['username'])) {
     header("Location: ../../Admin/php/login.php");

@@ -36,17 +36,17 @@
                 </a>
             </li>
             <li>
-                <a href="profile.php" class="nav-link">
+                <a href="dashboard.php?page=profile" class="nav-link">
                     <i class="fas fa-user-edit"></i> Edit Profile
                 </a>
             </li>
             <li>
-                <a href="change-password.php" class="nav-link">
+                <a href="dashboard.php?page=password" class="nav-link">
                     <i class="fas fa-lock"></i> Change Password
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link">
+                <a href="dashboard.php?page=support" class="nav-link">
                     <i class="fas fa-headset"></i> Support
                 </a>
             </li>
