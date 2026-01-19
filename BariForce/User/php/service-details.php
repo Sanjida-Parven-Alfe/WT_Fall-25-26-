@@ -152,6 +152,7 @@ if (isset($_GET['id'])) {
 
     <?php include 'footer.php'; ?>
 
+    <script src="../js/themeToggle.js"></script>
     <script src="../JS/service-details.js"></script>
 
 </body>

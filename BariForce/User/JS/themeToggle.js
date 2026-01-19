@@ -1,15 +1,34 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const body = document.body;
+    const icon = document.getElementById("theme-icon");
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        if (icon) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }
+    }
+});
+
 function toggleTheme() {
-  var body = document.body;
+    const body = document.body;
+    const icon = document.getElementById("theme-icon");
 
-  body.classList.toggle("dark-mode");
+    body.classList.toggle("dark-mode");
 
-  var icon = document.getElementById("theme-icon");
-
-  if (body.classList.contains("dark-mode")) {
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-  } else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
-  }
+    if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        if (icon) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }
+    } else {
+        localStorage.setItem("theme", "light");
+        if (icon) {
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+        }
+    }
 }
