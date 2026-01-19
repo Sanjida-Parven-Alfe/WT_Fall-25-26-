@@ -160,3 +160,25 @@ body {
 .dark-mode .section-header p {
   color: #bbb;
 }
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.cat-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: var(--card-shadow);
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.cat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
