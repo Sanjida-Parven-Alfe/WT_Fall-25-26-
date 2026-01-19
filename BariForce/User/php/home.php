@@ -29,7 +29,6 @@ $result = $conn->query($sql); ?>
 
             <div class="cta-buttons">
                 <a href="services.php" class="btn-primary">Book a Service</a>
-                <a href="login.php" class="btn-secondary">Sign In <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
 
