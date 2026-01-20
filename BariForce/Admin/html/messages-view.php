@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>User Messages - BariForce</title>
     <link rel="stylesheet" href="../CSS/dashboard.css">
     <link rel="stylesheet" href="../CSS/messages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-    
+
     <?php include 'sidebar.php'; ?>
 
     <section class="home-section">
@@ -22,7 +24,7 @@
         </nav>
 
         <div class="home-content">
-            
+
             <?php if (isset($_GET['msg'])): ?>
                 <?php if ($_GET['msg'] == 'deleted'): ?>
                     <div class="alert-success" style="padding: 15px; background: #d1e7dd; color: #0f5132; border-radius: 8px; margin-bottom: 20px;">
@@ -44,7 +46,7 @@
                     </thead>
                     <tbody>
                         <?php if ($result->num_rows > 0): ?>
-                            <?php while($row = $result->fetch_assoc()): ?>
+                            <?php while ($row = $result->fetch_assoc()): ?>
                                 <tr>
                                     <td class="user-info">
                                         <strong><?php echo htmlspecialchars($row['fullname']); ?></strong><br>
@@ -62,10 +64,9 @@
                                         <a href="mailto:<?php echo $row['email']; ?>" class="btn-reply" title="Reply">
                                             <i class="fas fa-reply"></i>
                                         </a>
-                                        <a href="messages.php?delete_id=<?php echo $row['id']; ?>" class="btn-delete" 
-                                           onclick="return confirm('Are you sure you want to delete this message?');">
+                                        <button onclick="deleteMessageAjax(<?php echo $row['id']; ?>)" class="btn-delete" style="border:none; cursor:pointer;">
                                             <i class="fas fa-trash-alt"></i>
-                                        </a>
+                                        </button>
                                     </td>
                                 </tr>
                             <?php endwhile; ?>
@@ -84,5 +85,8 @@
     </section>
 
     <script src="../JS/dashboard.js"></script>
+    <script src="../JS/dashboard.js"></script>
+    <script src="../JS/messages_ajax.js"></script>
 </body>
+
 </html>

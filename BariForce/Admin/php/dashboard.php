@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../../User/db/db_connect.php'; 
+require_once '../db/db_connect.php';
 
 if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     header("Location: login.php");
@@ -20,5 +20,4 @@ $earning_res = $conn->query("SELECT SUM(total_price) as total FROM bookings WHER
 $row = ($earning_res) ? $earning_res->fetch_assoc() : ['total' => 0];
 $total_earnings = $row['total'] ?? 0;
 
-require_once '../html/dashboard-view.php'; 
-?>
+require_once '../html/dashboard-view.php';
