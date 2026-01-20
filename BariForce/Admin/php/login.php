@@ -13,8 +13,10 @@ if (isset($_SESSION['username'])) {
 
 $error = "";
 
+$remembered_user = isset($_COOKIE["user_login"]) ? $_COOKIE["user_login"] : "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
+    $username = $conn->real_escape_string($_POST['username']);
     $password = $_POST['password'];
 
     $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
@@ -26,6 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_id'] = $row['id'];
         $_SESSION['username'] = $row['username'];
         $_SESSION['role'] = $row['role'];
+
+
+        if (!empty($_POST['remember'])) {
+            setcookie("user_login", $username, time() + (30 * 24 * 60 * 60), "/");
+        } else {
+            if (isset($_COOKIE["user_login"])) {
+                setcookie("user_login", "", time() - 3600, "/");
+            }
+        }
 
         if ($row['role'] == 'admin') {
             header("Location: dashboard.php");
@@ -75,6 +86,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?php if ($error): ?>
                     <p class="error-msg"><?php echo $error; ?></p>
                 <?php endif; ?>
+
+                <div class="remember-group">
+                    <input type="checkbox" name="remember" id="remember" <?php if (isset($_COOKIE["user_login"])) echo "checked"; ?>>
+                    <label for="remember">Remember Me</label>
+                </div>
 
                 <button type="submit" class="login-btn">Login</button>
             </form>
