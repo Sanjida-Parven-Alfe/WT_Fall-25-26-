@@ -2,6 +2,8 @@
 $msg = "";
 $msg_type = "";
 
+require_once '../db/db_connect.php';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_booking'])) {
     $booking_id = $_POST['booking_id'];
 

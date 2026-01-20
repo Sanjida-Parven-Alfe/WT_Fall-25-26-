@@ -65,7 +65,7 @@
                 <div class="table-section">
                     <div class="table-header">
                         <h3>Recent Activity</h3>
-                        <a href="my-bookings.php">View All</a>
+                       
                     </div>
                     <table>
                         <thead>

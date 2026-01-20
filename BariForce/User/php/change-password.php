@@ -1,6 +1,10 @@
 <?php
 $pass_msg = "";
 $pass_msg_type = "";
+$user_id = $_SESSION['user_id'];
+$user_query = "SELECT * FROM users WHERE id = '$user_id'";
+$user_result = $conn->query($user_query);
+$user = $user_result->fetch_assoc();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['change_password'])) {
     $current_pass = $_POST['current_pass'];
