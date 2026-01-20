@@ -6,9 +6,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['change_password'])) {
     $current_pass = $_POST['current_pass'];
     $new_pass = $_POST['new_pass'];
     $confirm_pass = $_POST['confirm_pass'];
+    $strongRegex = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/';
 
     if ($current_pass === $user['password']) {
-        if ($new_pass === $confirm_pass) {
+        if (!preg_match($strongRegex, $new_pass)) {
+            $pass_msg = "Password must be 6+ chars with Uppercase, Lowercase, Number & Special Char!";
+            $pass_msg_type = "error";
+        } else if ($new_pass === $confirm_pass) {
             $pass_sql = "UPDATE users SET password=? WHERE id=?";
             $stmt = $conn->prepare($pass_sql);
             $stmt->bind_param("si", $new_pass, $user_id);

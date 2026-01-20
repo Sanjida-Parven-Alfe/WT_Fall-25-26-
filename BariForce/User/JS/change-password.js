@@ -3,10 +3,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const newPass = document.getElementById("new_pass");
   const confirmPass = document.getElementById("confirm_pass");
   const errorText = document.getElementById("matchError");
+  const strongRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{6,}$/;
 
   if (form) {
     form.addEventListener("submit", function (e) {
-      if (newPass.value !== confirmPass.value) {
+      if (!strongRegex.test(passVal)) {
+        e.preventDefault();
+        errorText.textContent =
+          "Password must be 6+ chars with Uppercase, Lowercase, Number & Special Char!";
+        newPass.style.borderColor = "#e74c3c";
+      } else if (newPass.value !== confirmPass.value) {
         e.preventDefault();
         errorText.textContent = "Passwords do not match!";
         newPass.style.borderColor = "#e74c3c";

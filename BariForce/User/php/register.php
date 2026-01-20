@@ -9,9 +9,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $strongRegex = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{6,}$/';
     $confirm_pass = $_POST['confirm_password'];
 
-    if ($password !== $confirm_pass) {
+    if (!preg_match($strongRegex, $password)) {
+
+        $error = "Password must be at least 6 characters long and include uppercase, lowercase, number, and a special character.";
+    } else if ($password !== $confirm_pass) {
         $error = "Passwords do not match!";
     } else {
         $checkSQL = "SELECT * FROM users WHERE username = '$username' OR email = '$email'";
@@ -102,6 +106,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include 'footer.php'; ?>
 
     <script src="../js/themeToggle.js"></script>
+
+    <script src="../js/register_validation.js"></script>
 
 </body>
 
