@@ -13,7 +13,7 @@
     <?php endif; ?>
 
     <div class="form-container">
-        <form method="POST" action="dashboard.php?page=support">
+        <form id="ajaxSupportForm"> <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
             <div class="input-group">
                 <label>Subject</label>
                 <select name="subject" required>
@@ -25,8 +25,12 @@
             </div>
             <div class="input-group">
                 <label>Message</label>
-                <textarea name="message" rows="5" placeholder="Describe your issue..." required></textarea>
+                <textarea name="message" id="msg_body" rows="5" placeholder="Describe your issue..."
+                    required></textarea>
             </div>
+
+            <div id="responseMsg" style="display:none; padding:10px; border-radius:5px; margin-bottom:10px;"></div>
+
             <button type="submit" name="send_support" class="btn-support">Send Message</button>
         </form>
     </div>
