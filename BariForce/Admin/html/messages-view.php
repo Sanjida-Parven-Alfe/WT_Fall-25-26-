@@ -24,14 +24,7 @@
         </nav>
 
         <div class="home-content">
-
-            <?php if (isset($_GET['msg'])): ?>
-                <?php if ($_GET['msg'] == 'deleted'): ?>
-                    <div class="alert-success" style="padding: 15px; background: #d1e7dd; color: #0f5132; border-radius: 8px; margin-bottom: 20px;">
-                        <i class="fas fa-check-circle"></i> Message deleted successfully!
-                    </div>
-                <?php endif; ?>
-            <?php endif; ?>
+            <div id="ajax-alert" style="display:none; padding: 15px; border-radius: 8px; margin-bottom: 20px;"></div>
 
             <div class="message-container">
                 <table class="message-table">
@@ -47,7 +40,7 @@
                     <tbody>
                         <?php if ($result->num_rows > 0): ?>
                             <?php while ($row = $result->fetch_assoc()): ?>
-                                <tr>
+                                <tr id="message-row-<?php echo $row['id']; ?>">
                                     <td class="user-info">
                                         <strong><?php echo htmlspecialchars($row['fullname']); ?></strong><br>
                                         <small><?php echo htmlspecialchars($row['email']); ?></small><br>
@@ -64,8 +57,8 @@
                                         <a href="mailto:<?php echo $row['email']; ?>" class="btn-reply" title="Reply">
                                             <i class="fas fa-reply"></i>
                                         </a>
-                                        <button onclick="deleteMessageAjax(<?php echo $row['id']; ?>)" class="btn-delete" style="border:none; cursor:pointer;">
-                                            <i class="fas fa-trash-alt"></i>
+                                        <button onclick="deleteMessageAjax(<?php echo $row['id']; ?>)" class="btn-delete" style="border:none; cursor:pointer; background:none;">
+                                            <i class="fas fa-trash-alt" style="color: #e74c3c;"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -84,7 +77,6 @@
         </div>
     </section>
 
-    <script src="../JS/dashboard.js"></script>
     <script src="../JS/dashboard.js"></script>
     <script src="../JS/messages_ajax.js"></script>
 </body>
