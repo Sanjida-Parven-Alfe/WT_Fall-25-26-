@@ -41,6 +41,8 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
                     class="<?= basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active-link' : '' ?>">Services</a>
                 <a href="<?php echo $pathPrefix; ?>offers.php"
                     class="<?= basename($_SERVER['PHP_SELF']) == 'offers.php' ? 'active-link' : '' ?>">Offers</a>
+                <a href="<?php echo ($isInAdmin) ? 'about-us.php' : '../../Admin/php/about-us.php'; ?>"
+                    class="<?= basename($_SERVER['PHP_SELF']) == 'about-us.php' ? 'active-link' : '' ?>">About Us</a>
 
             </div>
             <div class="nav-right">
@@ -49,14 +51,14 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
                 </button>
 
                 <?php if (isset($_SESSION['username'])): ?>
-                  <a href="<?php echo $dashboardLink; ?>" class="nav-link">Dashboard</a>
-                    <?php if($_SESSION['role'] == 'user'): ?>
+                    <a href="<?php echo $dashboardLink; ?>" class="nav-link">Dashboard</a>
+                    <?php if ($_SESSION['role'] == 'user'): ?>
                         <a href="<?php echo $joinUsPath; ?>" class="btn-signup">Join Team</a>
                     <?php endif; ?>
-                   <a href="<?php echo $logoutPath; ?>" class="btn-logout">Logout</a>
+                    <a href="<?php echo $logoutPath; ?>" class="btn-logout">Logout</a>
                 <?php else: ?>
                     <a href="<?php echo $loginPath; ?>" class="nav-link">Login</a>
-                  <a href="<?php echo $joinUsPath; ?>" class="btn-signup">Join Us</a>
+                    <a href="<?php echo $joinUsPath; ?>" class="btn-signup">Join Us</a>
                 <?php endif; ?>
             </div>
         </div>

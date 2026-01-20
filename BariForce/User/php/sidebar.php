@@ -53,7 +53,7 @@
         </ul>
 
         <div class="logout-section">
-            <a href="logout.php">
+            <a href="logout.php" class="logout-link">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Logout</span>
             </a>
