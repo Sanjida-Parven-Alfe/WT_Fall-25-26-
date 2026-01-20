@@ -12,7 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $strongRegex = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{6,}$/';
     $confirm_pass = $_POST['confirm_password'];
 
-    if (!preg_match($strongRegex, $password)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = "Invalid email format! Please use a valid email (e.g., name@example.com).";
+    } else if (!preg_match($strongRegex, $password)) {
 
         $error = "Password must be at least 6 characters long and include uppercase, lowercase, number, and a special character.";
     } else if ($password !== $confirm_pass) {

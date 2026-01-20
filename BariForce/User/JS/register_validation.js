@@ -11,7 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const strongRegex =
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
 
-      if (!strongRegex.test(password)) {
+      const email = document.querySelector('input[name="email"]').value;
+      const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailReg.test(email)) {
+        e.preventDefault();
+        alert("Please enter a valid email address!");
+      } else if (!strongRegex.test(password)) {
         e.preventDefault();
         alert(
           "Password criteria not met!\n- At least 6 characters\n- One Uppercase & One Lowercase letter\n- One Number\n- One Special Character (@$!%*?&)",
