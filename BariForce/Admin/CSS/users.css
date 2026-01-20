@@ -20,6 +20,10 @@ table {
     border-collapse: collapse;
     white-space: nowrap;
 }
+.badge.employee {
+    background: #e0f7fa;
+    color: #00838f;
+}
 
 th, td {
     padding: 15px;

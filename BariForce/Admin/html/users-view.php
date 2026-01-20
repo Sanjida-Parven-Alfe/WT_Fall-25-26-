@@ -73,6 +73,8 @@
                                     <td>
                                         <?php if ($row['role'] == 'admin'): ?>
                                             <span class="badge admin">Admin</span>
+                                        <?php elseif ($row['role'] == 'employee'): ?>
+                                            <span class="badge user" style="background: #e0f2f1; color: #00796b;">Employee</span>
                                         <?php else: ?>
                                             <span class="badge user">User</span>
                                         <?php endif; ?>
